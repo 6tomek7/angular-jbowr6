@@ -8,8 +8,11 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { CartService } from './cart-service/cart.service';
+
 
 @NgModule({
+  providers: [CartService],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -18,6 +21,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
       { path: 'products/:productId', component: ProductDetailsComponent },
     ])
   ],
+  
   declarations: [
     AppComponent,
     TopBarComponent,
